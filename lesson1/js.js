@@ -18,3 +18,4 @@ appData.expenses.a / b;
 appData.expenses.c / d;
 alert("Ваш бюджет на день:" + appData.budget / 30);
 }
+main();
