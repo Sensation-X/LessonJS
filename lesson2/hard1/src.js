@@ -9,17 +9,19 @@ function main() {
 //          без работы с объектом даты)
 
 
-let week = ['Понедельник','Втортник','Среда','Четверг','Пятница','Суббота','Воскресенье'];
+    let week = ['Понедельник', 'Втортник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+        parentElem = document.body;
 
-for (let i = 0; i < week.length; i ++){
-        if (week[i] != 'Суббота' && week[i] != 'Воскресенье' && week[i] !== 'Пятница' ){
-        document.write(week[i] + '<br>');
-    } if (week[i] === 'Пятница'){
-        document.write('<i>' + week[i] + '</i><br>');
-    } if (week[i] === 'Суббота' || week[i] === 'Воскресенье') {
-        document.write('<b>' + week[i] + '</b><br>');
+    for (let i = 0; i < week.length; i++) {
+        let createSpan = document.createElement('span');
+        createSpan.innerHTML = `${week[i]}<br/>`;
+        parentElem.appendChild(createSpan);
+        if (week[i] == 'Суббота' || week[i] == 'Воскресенье') {
+            createSpan.innerHTML = `${week[i].bold()}<br/>`;
+        } else if (week[i] == 'Пятница') {
+            createSpan.innerHTML = `${week[i].italics()}<br/>`;
+        }
     }
-}
 
 }
 main();

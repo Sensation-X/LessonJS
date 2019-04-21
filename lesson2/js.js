@@ -1,14 +1,14 @@
 function main() {
     'use strict';
-let money = +prompt("Ваш бюджет на месяц?", "");
-let time = prompt("Введите дату в формате YYYY-MM-DD", "");
-let appData = {
-    budget: money,
-    timeData: time,
-    expenses: {},
-    optionalExpenses: {},
-    income: [],
-    savings: false
+    let money = +prompt("Ваш бюджет на месяц?", "");
+    let time = prompt("Введите дату в формате YYYY-MM-DD", "");
+    let appData = {
+        budget: money,
+        timeData: time,
+        expenses: {},
+        optionalExpenses: {},
+        income: [],
+        savings: false
 };
 
     for (let i = 0; i < 2; i++) {
@@ -20,6 +20,7 @@ let appData = {
             console.log('Верно!');
             appData.expenses[a] = b;
         } else {
+            alert('Не делай так больше! :)');
             i--;
             continue;
         }
@@ -37,6 +38,7 @@ let appData = {
     //         console.log("Верно!");
     //         appData.expenses[a] = b;
     //     } else {
+                alert('Не делай так больше! :)');
     //         i--;
     //         }
     //         i++;
@@ -52,6 +54,7 @@ let appData = {
     //         console.log("Верно!");
     //         appData.expenses[a] = b;
     //     } else {
+                alert('Не делай так больше! :)');
     //         i--;
     //     }
     //     i++;
