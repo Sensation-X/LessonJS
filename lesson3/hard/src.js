@@ -15,8 +15,39 @@ function main() {
     // ·        Если строка более 50 знаков - то после 50го символа часть текста скрывается и вместо них появляются три точки (...)
 
 
+    let str = "урок-3-был слишком легким";
+    str = (str[0].toUpperCase() + str.substring(1)).replace(/-/g, ' ');    //Строка с большой буквы + дефис меняем на пробел - выводдим
+    console.log(str);
+    str = str.match(/легким/)[0].replace(/им$/, 'о');    // вырезаем "легким" меняем 2 последние буквы на "о" - выводим
+    console.log(str);
 
 
+
+    let arr = [20, 33, 1, 'Человек', 2, 3];
+    let a = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof (arr[i]) === 'number') {
+            a += arr[i] ** 3;
+        }
+    }
+    console.log(Math.sqrt(a));     // выводим квадратный корень из суммы кубов его элементов ( искл человека)
+
+
+
+    let testText = prompt("Напиши о себе", "");
+    function testStr(testText) {
+
+        if (typeof (testText) === 'string') {
+            testText = testText.trim();   // Убираем пробелы в начале и в конце
+        } else {
+            alert('Нужно было написать о себе !'); // сообщаем что строка не передана
+        }
+        if (testText.length > 50) {  // на более 50 символов, появляются "..." остальной текст скрывается
+            alert('Не так много, всему есть предел..');
+        }
+        console.log(testText.substring(0, 50) + '...');
+    }
+    testStr(testText);
 }
 main();
 
