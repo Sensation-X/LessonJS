@@ -19,7 +19,7 @@ function main() {
         optionalExpenses: {},
         income: [],
         savings: true
-};
+    };
 
     function chooseExpanses() {
         for (let i = 0; i < 2; i++) {
@@ -44,7 +44,7 @@ function main() {
         for (let i = 0; i < 3; i++) {
             let a = prompt("Введите необязательную статью расходов в этом месяце", "");
 
-            if (typeof (a) === 'string' && typeof (a) != null && a != '' && a.length < 50) {
+            if (typeof (a) === 'string' && (a != null)  && a != '' && a.length < 50) {
                 appData.optionalExpenses[i + 1] = a;
             } else {
                 --i;
