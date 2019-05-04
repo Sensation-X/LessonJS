@@ -76,10 +76,10 @@ expensesItemBtn.addEventListener('click', function() {
     expenses.textContent = sum;
 });
 
-expensesItem[1].addEventListener('input', () => {
+expensesItem[1].addEventListener('input', function() {
     expensesItem[1].value = expensesItem[1].value.match(/[0-9]+/gi);
 });
-expensesItem[3].addEventListener('input', () => {
+expensesItem[3].addEventListener('input', function() {
     expensesItem[3].value = expensesItem[3].value.match(/[0-9]+/g);
 });
 
@@ -96,8 +96,8 @@ optionalExpensesBtn.addEventListener('click', function() {
     }
 });
 
-optionalExpensesItems.forEach((item) => {
-    item.addEventListener('input', () => {
+optionalExpensesItems.forEach(function(item) {
+    item.addEventListener('input', function() {
         item.value = item.value.match(/[а-я]+[ а-я]*/gi);
     });
 });
