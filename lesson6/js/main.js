@@ -76,12 +76,6 @@ expensesItemBtn.addEventListener('click', function() {
     expenses.textContent = sum;
 });
 
-expensesItem[1].addEventListener('input', function() {
-    expensesItem[1].value = expensesItem[1].value.match(/[0-9]+/gi);
-});
-expensesItem[3].addEventListener('input', function() {
-    expensesItem[3].value = expensesItem[3].value.match(/[0-9]+/g);
-});
 
 optionalExpensesBtn.addEventListener('click', function() {
     optionalExpenses.textContent = '';
@@ -94,12 +88,6 @@ optionalExpensesBtn.addEventListener('click', function() {
             optionalExpenses.textContent += appData.optionalExpenses[i];
         }
     }
-});
-
-optionalExpensesItems.forEach(function(item) {
-    item.addEventListener('input', function() {
-        item.value = item.value.match(/[а-я]+[ а-я]*/gi);
-    });
 });
 
 countBudgetBtn.addEventListener('click', function() {
