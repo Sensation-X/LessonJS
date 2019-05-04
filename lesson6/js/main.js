@@ -76,6 +76,13 @@ expensesItemBtn.addEventListener('click', function() {
     expenses.textContent = sum;
 });
 
+expensesItem[1].addEventListener('input', () => {
+    expensesItem[1].value = expensesItem[1].value.match(/[0-9]+/gi);
+});
+expensesItem[3].addEventListener('input', () => {
+    expensesItem[3].value = expensesItem[3].value.match(/[0-9]+/g);
+});
+
 optionalExpensesBtn.addEventListener('click', function() {
     optionalExpenses.textContent = '';
     for (let i = 0; i < optionalExpensesItems.length; i++) {
@@ -88,6 +95,13 @@ optionalExpensesBtn.addEventListener('click', function() {
         }
     }
 });
+
+optionalExpensesItems.forEach((item) => {
+    item.addEventListener('input', () => {
+        item.value = item.value.match(/[а-я]+[ а-я]*/gi);
+    });
+});
+
 countBudgetBtn.addEventListener('click', function() {
 
     if (appData.budget != undefined && moneyPerDay > 0) {
