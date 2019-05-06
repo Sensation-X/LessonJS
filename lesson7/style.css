@@ -1,0 +1,22 @@
+.timer-numbers {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 90px;
+    color: #c78030;
+}
+
+.timer-numbers:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #c78030;
+    margin: 0 auto;
+    margin-top: 4px;
+    width: 30%;
+}
+
+.title {
+    font-size: 70px;
+    color: #c78030;
+    text-align: center;
+}

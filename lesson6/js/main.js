@@ -83,7 +83,7 @@ optionalExpensesBtn.addEventListener('click', function() {
         let a = optionalExpensesItems[i].value;
         appData.optionalExpenses[i] = a;
         if (i < 2) {
-            optionalExpenses.textContent += appData.optionalExpenses[i] + ', ';
+            optionalExpenses.textContent += appData.optionalExpenses[i] + '   ';
         } else {
             optionalExpenses.textContent += appData.optionalExpenses[i];
         }
