@@ -41,10 +41,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //Timer
 
-    let deadline = '2019-05-09';
+    let deadline = '2019-05-28';
 
     function getTimeRemaining(endtime) {
-        let t = Date.parse(endtime) - Date.parse(new Date()) + ((new Date().getTimezoneOffset())*1000*60),
+        let t = Date.parse(endtime) - Date.parse(new Date()) + ((new Date().getTimezoneOffset()) * 1000 * 60),
             seconds = Math.floor((t / 1000) % 60),
             minutes = Math.floor((t / 1000 / 60) % 60),
             hours = Math.floor((t / 1000 / 60 / 60));
@@ -124,6 +124,7 @@ window.addEventListener('DOMContentLoaded', function () {
     function myAnimation() {
         clearInterval(myAnimationId);
         myAnimationId = setInterval(frame, 100);
+
         function frame() {
             if (opac >= 1) {
                 document.body.style.overflow = 'hidden';
@@ -153,7 +154,7 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-    
+
     if (window.navigator.userAgent.toUpperCase().indexOf('.NET') != -1 ||
         window.navigator.userAgent.toUpperCase().indexOf('EDGE') != -1) {
 
@@ -190,9 +191,10 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     } else {
         close.addEventListener('click', myAnimationStop);
-        
+
         descriptionBtn.forEach(function (item) {
             item.addEventListener('click', myAnimation);
         });
     }
+
 });
