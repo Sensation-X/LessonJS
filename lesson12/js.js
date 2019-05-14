@@ -268,5 +268,5 @@ function formSend(elem) {
     }
 
     formSend(form);
-    formSend(form-contacts);
+    formSend(formContacts);
 });
