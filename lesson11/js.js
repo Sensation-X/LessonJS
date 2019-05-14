@@ -226,12 +226,9 @@ window.addEventListener('DOMContentLoaded', function () {
             elem.appendChild(statusMessage);
             let input = elem.getElementsByTagName('input');
 
-
             let request = new XMLHttpRequest();
             request.open('POST', 'server.php');
             request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-
-
 
             let formData = new FormData(elem);
             let obj = {};
