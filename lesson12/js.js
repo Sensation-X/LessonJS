@@ -206,7 +206,7 @@ window.addEventListener('DOMContentLoaded', function () {
     };
 
     let form = document.querySelector('.main-form'),
-        formContacts = document.querySelector('.formContacts'),
+        formContacts = document.querySelector('.form-contacts'),
         statusMessage = document.createElement('div'),
         input = document.getElementsByName('phone');
         statusMessage.classList.add('status');
@@ -214,7 +214,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // Валидация 
     for (let i = 0; i < input.length; i++){
         input[i].addEventListener('input', () => {
-            input[i].value = input[i].value.replace(/[^0-9]/,'');
+            input[i].value = input[i].value.replace(/[^0-9+]/,'');
     });
     }
 
@@ -258,7 +258,7 @@ function formSend(elem) {
                 }
             }
 
-        sendData(formData)
+        sendData()
             .then(() => statusMessage.innerHTML = message.loading)
             .then(() => statusMessage.innerHTML = message.success)
             .catch(() => statusMessage.innerHTML = message.failure)
@@ -268,5 +268,5 @@ function formSend(elem) {
     }
 
     formSend(form);
-    formSend(formContacts);
+    formSend(form-contacts);
 });
