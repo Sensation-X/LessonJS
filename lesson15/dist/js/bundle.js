@@ -114,7 +114,7 @@ function calc() {
         total = (daysSum + personsSum) * 4000;
         let end = total * place.options[place.selectedIndex].value;
 
-        if (persons.value == '' || restDays.value == '' || persons.value == 0 || restDays.value == 0) {
+        if (persons.value == '' || restDays.value == '' || persons.value[0] == 0 || restDays.value[0] == 0) {
             totalValue.innerHTML = 0;
         } else if (start < end) {
             let interval = setInterval(function () {
@@ -144,7 +144,7 @@ function calc() {
         total = (daysSum + personsSum) * 4000;
         let end = total * place.options[place.selectedIndex].value;
 
-        if (persons.value == '' || restDays.value == '' || persons.value == 0 || restDays.value == 0) {
+        if (persons.value == '' || restDays.value == '' ||  persons.value[0] == 0 || restDays.value[0] == 0) {
             totalValue.innerHTML = 0;
         } else if (start < end) {
             let interval = setInterval(function () {
